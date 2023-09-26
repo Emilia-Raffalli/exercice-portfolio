@@ -3,48 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rem="stylesheet" href="styles.css">
-    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Emilia Raffalli - Portfolio</title>
 </head>
 <body>
 
-    <head>
-        <img src="#" alt="Logo Emilia Raffalli (ER)">
+    <header>
+        <nav id="nav-top" class="justify-center flex align-center space-between">
+            <a href="#">
+                <img src="img/emiliaraffalli-logo.svg" alt="Logo Emilia Raffalli (ER)">
+            </a>
 
-        <nav>
-            <ul>
-                <li>Réalistaions</li>
-                <li>Expertise</li>
-                <li>A propos</li>
-                <li>Méthode</li>
-
+            <ul class="flex space-between">
+                <li><a href="#realisations">Réalisations</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+
+            <a href="#contact"><input type="button" value="Me contacter"></a>
+
         </nav>
+                
 
-        <input type="button" value="Me contacter">
-
-        <div>
-            <img src="#">
-            <h1>Emilia Raffalli</h1>
-            <p>Un projet ? <a href="#">Me contacter</a> 
+        
+        <div class="intro flex flex-column align-center">
+            <!-- <div id="tirets"></div> -->
+        <img src="img/Vector.svg">
+         <h1>Emilia Raffalli</h1>
+            <p>Un projet ? <a href="#contact">Me contacter</a> 
             </p>
-            <div>
-                <img src="#" alt="picto LinkedIn">
-                <img src="#" alt="picto Instagram">
-                <img src="#" alt="picto Message">
+            <div class="flex align-end justify-center space-between picto-header">
+                <a href="#"><img src="img/picto-linkedin.svg" alt="picto LinkedIn"></a> 
+                <a href="#"><img src="img/picto-insta.svg" alt="picto Instagram"></a>
+                <a href="#"><img src="img/picto-mail.svg" alt="picto Message"></a>
             </div>
         </div>
+        
 
-    </head>
+    </header>
 
 
         <main>
 
 
-            <section>
+            <section class="realisations flex flex-column align-center">
 
 
-                <h2>Réalisations</h2>
+                <h2 id="realisations"> Réalisations</h2>
+               
+                <div class="flex justify-center flex-wrap">
 
                     <a href="#">
                         <article>
@@ -93,53 +103,51 @@
                             </div>
                         </article>
                     </a> 
+                </div>
 
             </section>
 
-            <section>
+            <section class="expertise">
 
-                <h2>Domaines d'expertise</h2>
+                <h2 id="expertise">Domaines d'expertise</h2>
 
                     <a href="#">
                         <article>
-                            <img src="#">
                             <h4>expertise 1</h4>
                         </article>
                     </a>
 
                     <a href="#">
                         <article>
-                            <img src="#">
                             <h4>expertise 1</h4>
                         </article>
                     </a>
 
                     <a href="#">
                         <article>
-                            <img src="#">
                             <h4>expertise 1</h4>
                         </article>
                     </a>
 
             </section>
 
-            <section>
+            <section class="contact flex flex-wrap space-between">
 
-                <div>
-                    <h3>Vous avez un projet ?</h3>
-                    <div>
-                        <img src="#">
-                        <p>e.raffalli@hotmail.fr</p>
+                <div class="flex flex-column">
+                    <h3 id="contact">Vous avez un projet ?</h3>
+                    <div class="flex align-end">
+                        <img src="img/picto-mail.svg">
+                        <a href="mailto:e.raffalli@hotmail.fr">e.raffalli@hotmail.fr</a>
                     </div>
 
                     <div>
                         <img src="#">
-                        <p>06 25 77 80 14</p>
+                        <a href="tel:0625778014">06 25 77 80 14</a>
                     </div>
                 </div>
 
 
-                <form methode="post" action="fichier.php">
+                <form class="flex flex-column" methode="post" action="fichier.php">
 
                     <label for="name">Nom</label>
                     <input type="text" name="name" id="name" required>
@@ -153,6 +161,8 @@
 
                     <label for="checkbox">J'accepte les conditions générales</label>
                     <input type="checkbox" id="checkbox">
+
+                    <input type="button" value="Envoyer">
                 </form>
             </section>
 
@@ -163,7 +173,7 @@
         <footer>
             <nav>
                 <ul>
-                    <li>Réalistaions</li>
+                    <li>Réalisations</li>
                     <li>Expertise</li>
                     <li>A propos</li>
                     <li>Méthode</li>
