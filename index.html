@@ -12,52 +12,60 @@
 <body>
 
     <header>
+       
+       
         <nav id="nav-top" class="justify-center flex align-center space-between">
-            <a href="#">
-                <img src="img/emiliaraffalli-logo.svg" alt="Logo Emilia Raffalli (ER)">
+            <a class="logo" href="#">
+                <!-- <img src="img/emiliaraffalli-logo.svg" width="70%"  alt="Logo Emilia Raffalli (ER)"> -->
             </a>
 
-            <ul class="flex space-between">
+            <ul class="flex align-center">
                 <li><a href="#realisations">Réalisations</a></li>
                 <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">A propos</a></li>
+                <a href="#contact"><input type="button" value="Me contacter"></a>
+
             </ul>
 
-            <a href="#contact"><input type="button" value="Me contacter"></a>
 
         </nav>
                 
-
-        
-        <div class="intro flex flex-column align-center">
+    </header>
+    
+    
+    <main>
+        <div id="intro" class="intro flex flex-column align-center">
             <!-- <div id="tirets"></div> -->
         <img src="img/Vector.svg">
          <h1>Emilia Raffalli</h1>
             <p>Un projet ? <a href="#contact">Me contacter</a> 
             </p>
-            <div class="flex align-end justify-center space-between picto-header">
-                <a href="#"><img src="img/picto-linkedin.svg" alt="picto LinkedIn"></a> 
-                <a href="#"><img src="img/picto-insta.svg" alt="picto Instagram"></a>
-                <a href="#"><img src="img/picto-mail.svg" alt="picto Message"></a>
+            <div class="flex align-end social-media">
+                <!-- <a href="#"><img src="img/picto-linkedin.svg" alt="picto LinkedIn"></a>  -->
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <!-- <a href="#"><img src="img/picto-insta.svg" alt="picto Instagram"></a>
+                <a href="#"><img src="img/picto-mail.svg" alt="picto Message"></a> -->
             </div>
         </div>
         
 
-    </header>
+    
 
 
-        <main>
+       
 
 
             <section class="realisations flex flex-column align-center">
 
 
-                <h2 id="realisations"> Réalisations</h2>
+                <!-- <h2 id="realisations"> Réalisations</h2> -->
                
                 <div class="flex justify-center flex-wrap">
 
                     <a href="#">
-                        <article>
+                        <article class="article1">
                             <div>
                                 <h3>Projet 1</h3>
                             </div>
@@ -65,7 +73,7 @@
                     </a> 
 
                     <a href="#">
-                        <article>
+                        <article class="article2">
                             <div>
                                 <h3>Projet 2</h3>
                             </div>
@@ -73,7 +81,7 @@
                     </a> 
 
                     <a href="#">
-                        <article>
+                        <article class="article3">
                             <div>
                                 <h3>Projet 3</h3>
                             </div>
@@ -81,7 +89,7 @@
                     </a> 
 
                     <a href="#">
-                        <article>
+                        <article class="article4">
                             <div>
                                 <h3>Projet 4</h3>
                             </div>
@@ -89,7 +97,7 @@
                     </a> 
 
                     <a href="#">
-                        <article>
+                        <article class="article5">
                             <div>
                                 <h3>Projet 5</h3>
                             </div>
@@ -97,7 +105,7 @@
                     </a> 
                     
                     <a href="#">
-                        <article>
+                        <article class="article6">
                             <div>
                                 <h3>Projet 6</h3>
                             </div>
@@ -109,34 +117,37 @@
 
             <section class="expertise">
 
+                <div class="triangle"></div>
                 <h2 id="expertise">Domaines d'expertise</h2>
 
+                <div class="flex justify-center flex-wrap">
+
                     <a href="#">
-                        <article>
+                        <article class="article-expertise1"  >
                             <h4>expertise 1</h4>
                         </article>
                     </a>
 
                     <a href="#">
-                        <article>
+                        <article class="article-expertise2">
                             <h4>expertise 1</h4>
                         </article>
                     </a>
 
                     <a href="#">
-                        <article>
+                        <article class="article-expertise2">
                             <h4>expertise 1</h4>
                         </article>
                     </a>
-
+                </div>
             </section>
 
-            <section class="contact flex flex-wrap space-between">
+            <section class="contact flex flex-wrap">
 
-                <div class="flex flex-column">
+                <div class="flex flex-column justify-center">
                     <h3 id="contact">Vous avez un projet ?</h3>
                     <div class="flex align-end">
-                        <img src="img/picto-mail.svg">
+                        <!-- <img src="img/picto-mail.svg"> -->
                         <a href="mailto:e.raffalli@hotmail.fr">e.raffalli@hotmail.fr</a>
                     </div>
 
@@ -147,56 +158,69 @@
                 </div>
 
 
-                <form class="flex flex-column" methode="post" action="fichier.php">
+                <form class="flex flex-column align-start " methode="post" action="fichier.php">
 
                     <label for="name">Nom</label>
-                    <input type="text" name="name" id="name" required>
+                    <input class="input" type="text" name="name" id="name" required autofocus>
 
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" required>
+                    <input class="input" type="email" name="email" id="email" required>
 
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" placeholder="Votre message">
+                    <textarea class="input"  name="message" id="message" placeholder="Votre message">
                     </textarea>
 
+                   
+
+                    <input type="checkbox" id="checkbox" value="5"  name="checkbox" />
                     <label for="checkbox">J'accepte les conditions générales</label>
-                    <input type="checkbox" id="checkbox">
+
 
                     <input type="button" value="Envoyer">
                 </form>
+
+
             </section>
 
 
-        </main>
+    </main>
 
 
-        <footer>
-            <nav>
+    <footer class="flex flex-column align-center justify-center">
+        <div class=" nav-bottom-wrap flex align-end"  > 
+            <nav class="nav-bottom flex  align-start space-around">
                 <ul>
-                    <li>Réalisations</li>
-                    <li>Expertise</li>
-                    <li>A propos</li>
-                    <li>Méthode</li>
-    
+                    <li><a href="#">Réalisations</a></li>
+                    <li><a href="#">Expertise</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
 
                 <ul>
-                    <li>Mentions légales</li>
-                    <li>Contact</li>
-                    <li>Plan du site</li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Plan du site</a></li>
                 </ul>
 
-                <ul>
-                    <li><img src="#" alt="picto LinkedIn"></li>
-                    <li><img src="#" alt="picto Instagram"></li>
-                    <li><img src="#" alt="picto Message"></li>
-                </ul>
-
+                <div class="flex flex-column align-end social-media-footer">
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>    
+                    
             </nav>
+        <a href="#intro"><div class="arrow"> </div></a>
+        </div>  
 
-            <p>© 2023 -Emilia Raffalli - Developpeuse - Paris</p>
+       
 
-        </footer>
+        
+
+
+        <p>© 2023 -Emilia Raffalli - Developpeuse - Paris</p>
+
+
+  
+
+     </footer>
 
 
 

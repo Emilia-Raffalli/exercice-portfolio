@@ -6,6 +6,7 @@ margin:0;
 padding:0px;
 list-style-type: none;
 font-family:Montserrat,sans-serif;
+box-sizing:border-box;
 
 }
 
@@ -15,11 +16,23 @@ body{
 
 header{
     /* border:1px solid black; */
-    padding:4rem 4rem 0rem 4rem;
+    padding:3rem 5rem 3rem 5rem;
+    background-color: #ffffff;
+    width:100%;
+    position:fixed;
+    top:0;
+    z-index:100;
+}
+
+
+
+
+.intro{
+    margin-top:200Px;
 }
 
 section{
-    padding:4rem;
+    padding:3rem 3rem;
 
 }
 
@@ -27,11 +40,7 @@ a{
     text-decoration:none;
 }
 
-/* TITRES */
 
-h1{
-    margin:2rem 0rem ;
-}
 
 
 
@@ -44,9 +53,12 @@ h1{
 flex-wrap:wrap;
 }
 
-
 .justify-center{
     justify-content: center;
+}
+
+.justify-end{
+    justify-content: flex-end;
 }
 
 .space-between{
@@ -58,6 +70,10 @@ flex-wrap:wrap;
 }
 
 
+.align-start{
+    align-items:flex-start;
+}
+
 .flex-column{
     flex-direction: column;
 }
@@ -67,6 +83,29 @@ flex-wrap:wrap;
 
 }
 
+.flex-end{
+    justify-content: flex-end;
+}
+
+.flex-start{
+    justify-content: flex-start;
+    
+}
+
+.self-flex-end{
+    justify-self: end;
+}
+
+
+
+
+
+
+/* TITRES */
+
+h1, h2, h3{
+    margin:1.5rem 0rem ;
+}
 
 
 
@@ -82,6 +121,21 @@ flex-wrap:wrap;
 #nav-top{
 /* background-color: antiquewhite; */
 }
+
+.logo{
+    min-width:60px;
+    min-height:60px;
+    background:url(img/emiliaraffalli-logo.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.logo:hover{
+    background:url(img/emiliaraffalli-logo-green.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 
 #nav-top ul li{
     min-width:8rem;
@@ -120,9 +174,128 @@ a:hover{
 
 
 
+
+.social-media{
+    /* background-color:grey; */
+    margin:1rem 0;
+    min-width:100px;
+}
+
+
+
+.social-media a{
+    min-width:35px;
+    min-height:35px;
+}
+
+.social-media-footer a{
+    min-width:30px;
+    min-height:30px;
+}
+
+.social-media a:first-child{
+    background:url("img/picto-linkedin.svg") no-repeat;
+    background-size:contain;
+
+}
+
+
+.social-media a:first-child:hover{
+    background: url("img/picto-linkedin-green.svg") no-repeat;
+    background-size:contain;
+
+}
+
+
+
+.social-media a:nth-child(2){
+    background: url("img/picto-insta.svg") no-repeat;
+    background-size:contain;
+}
+
+
+
+.social-media a:nth-child(2):hover{
+    background: url("img/picto-insta-green.svg") no-repeat;
+    background-size:contain;
+}
+
+
+.social-media a:nth-child(3){
+    background: url("img/picto-mail.svg") no-repeat;
+    background-size:contain;
+}
+
+
+.social-media a:nth-child(3):hover{
+    background: url("img/picto-mail-green.svg") no-repeat;
+    background-size:contain;
+    background-position: bottom;
+}
+
+
+
+
+
+.social-media-footer a:first-child{
+    background:url("img/picto-linkedin-white.svg") no-repeat;
+    background-size:contain;
+
+}
+
+
+.social-media a:first-child:hover, .social-media-footer a:first-child:hover{
+    background: url("img/picto-linkedin-green.svg") no-repeat;
+    background-size:contain;
+
+}
+
+
+
+.social-media-footer a:nth-child(2){
+    background: url("img/picto-insta-white.svg") no-repeat;
+    background-size:contain;
+}
+
+
+
+.social-media a:nth-child(2):hover, .social-media-footer a:nth-child(2):hover{
+    background: url("img/picto-insta-green.svg") no-repeat;
+    background-size:contain;
+}
+
+
+.social-media-footer a:nth-child(3){
+    background: url("img/picto-mail-white.svg") no-repeat; 
+    background-size:contain;
+}
+
+
+.social-media a:nth-child(3):hover, .social-media-footer a:nth-child(3):hover{
+    background: url("img/picto-mail-green.svg") no-repeat;
+    background-size:contain;
+    background-position: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 input[type=button]{
     background-color: #001AFF;
-    padding:1rem;
+    padding:0.9rem;
     border: none;
     text-transform: uppercase;
     color:#ffffff;
@@ -138,44 +311,201 @@ input[type=button]:hover{
 
 
 
-.intro{
-    margin:3rem 0rem;
-}
-
-.picto-header{
-    /* background-color:grey; */
-    margin:1rem 0;
-    min-width:100px;
-}
-
-
-
-
-/* MAIN */
-
 
 /* REALISATIONS */
 
 .realisations{
-    background-color:aquamarine;
+    background-color:#ffffff;
+    border-bottom: 2px solid #001AFF;
 }
 
-.realisations a article{
-    min-width:22rem;
-    height:22rem;
-    background-color: black;
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    min-width:20rem;
+    height:20rem;
+    /* background-color:#001AFF; */
     justify-content: space-around;
     margin:1rem;
+}
 
+
+
+
+
+.article1{
+    background-image: url("img/projets/Mk\ production-logo_FEED-INSTA.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #FF00B8;
+}
+
+.article2{
+
+    background-color:#14F661;
+}
+
+.article3{
+  
+    background-color:#001AFF;
+}
+
+.article4{
+  
+    background-color: #FF00B8;
+}
+
+.article5{
+ 
+    background-color:#001AFF;
+}
+
+.article6{
+
+    background-color:#14F661;
+}
+
+
+
+
+
+/* EXPERTISE */
+
+section.expertise{
+    position: relative;
+}
+
+.triangle{
+    width:60px;
+    height:60px;
+    background:url("img/triangle-blue.svg") no-repeat;
+    background-size: contain;
+    position:absolute;
+    top:0;
+}
+
+
+
+
+section.expertise article{
+    background-color: #ddd;
+}
+
+.expertise article:hover{
+    opacity: 0.5;
+}
+
+
+
+
+
+/* CONTACT */
+
+
+
+
+section.contact{
+    background-color:#F6F7FF;
+    
+
+}
+
+section.contact > div{
+    margin:0rem 9rem;
 }
 
 form{
-    background-color:grey;
-    min-width:70%;
+    min-width:50%;
 }
 
 
 
+
+
+
+label{
+    margin:10px 0px 10px 0px;
+}
+
+.input{
+    border:none;
+    padding:0.7rem;
+    box-shadow: inset 1px 1px 2px grey;
+    width:100%;
+    
+
+}
+
+
+
+
+input[type="checkbox"]{
+    margin: 0.5rem 0;
+  }
+  
+ 
+
+
+
+
+
+
+/* FOOTER */
+
 footer{
     background-color:#001AFF;
+    min-height:100px;
+    padding:3rem 5rem 2rem 5rem;
+
+}
+
+footer p{
+    color:#ffffff;
+    font-size:0.8em;
+}
+
+.nav-bottom{
+    /* background-color: antiquewhite; */
+    width:100%;
+    margin-bottom:1rem;
+
+
+}
+
+.nav-bottom li{
+    /* background-color: #14F661; */
+    margin: 10px 30px;
+
+}
+
+
+.nav-bottom a{
+    color:#ffffff;
+    font-weight: 500;
+    font-size:0.8em;
+
+
+}
+
+
+
+
+.nav-bottom a:hover{
+    color:#14F661;
+
+}
+
+.arrow{
+    min-width:35px;
+    min-height:35px;
+    background:url("img/arrow-white.svg") no-repeat;
+    background-size: contain;
+    cursor:pointer;
+}
+
+
+.nav-bottom-wrap{
+    width:100%;
 }
