@@ -21,14 +21,27 @@ header{
     width:100%;
     position:fixed;
     top:0;
-    z-index:100;
+    z-index:99;
+    box-shadow: 3px 2px 6px #ddd;
 }
 
 
 
 
+nav.menu-mobile{
+    display:none;
+}
+
+
+
+#clic-menu,label.clic-menu{
+    display:none;
+}
+
+
+
 .intro{
-    margin-top:200Px;
+    margin-top:200px;
 }
 
 section{
@@ -118,9 +131,129 @@ h1, h2, h3{
 
 /* ----------------------------HEADER */
 
-#nav-top{
-/* background-color: antiquewhite; */
+#nav-top input[type=checkbox]{
+    display:none;
 }
+
+
+
+label[for=mobile]{
+    color:black;
+    display:none;
+}
+
+li.dropdown-contact{
+    display:none;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+
+@media screen and (max-width:768px){
+
+
+
+    .conteneur-nav-top{
+        position: relative;
+        width:60%;
+
+    }
+    
+
+    #nav-top{
+        align-items: flex-start;        
+        /* position: sticky; */
+        }
+        
+
+        label[for=mobile]{
+            display:block;
+        }
+        
+        .conteneur-nav-top{
+            position:relative;
+            background-color:rebeccapurple;
+            width:100%;
+            /* height: 80px; */
+        }
+
+        .conteneur-nav-top ul{
+            position:absolute;
+            background-color: #FF00B8;
+            width:100%;
+            top:5.1rem;
+            right:0;
+            
+        }
+
+
+    .conteneur-nav-top label{
+        position:absolute;
+        right:0px;
+        top:0;
+        color:black;
+        /* width:100%; */
+        /* background-color:pink; */
+        padding:0.9rem;
+        border: none;
+        text-transform: uppercase;
+        text-align: right;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+        
+    
+        li.dropdown-contact{
+            display:block;
+        }
+
+        #nav-top ul{
+            display: none;}
+
+        
+            .desktop-button{
+                display: none;
+            }
+            
+            
+            
+            #nav-top input[type=checkbox]:checked + ul.dropdown-menu{
+                display:block;
+            
+            }
+            
+            #nav-top input[type=checkbox]:checked + ul li{
+                text-align: right;
+            }
+
+         
+            
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .logo{
     min-width:60px;
@@ -140,7 +273,7 @@ h1, h2, h3{
 #nav-top ul li{
     min-width:8rem;
     text-align: center;
-    margin: 0px 10px;
+    margin: 10px 10px;
 }
 
 /* #nav-top a{
@@ -406,7 +539,7 @@ section.expertise article{
 
 
 
-section.contact{
+section.contact, section.expertise{
     background-color:#F6F7FF;
     
 
@@ -416,12 +549,10 @@ section.contact > div{
     margin:0rem 9rem;
 }
 
-form{
+
+section.contact form{
     min-width:50%;
 }
-
-
-
 
 
 
@@ -508,4 +639,183 @@ footer p{
 
 .nav-bottom-wrap{
     width:100%;
+}
+
+
+
+
+
+@media screen and (max-width:768px){
+
+
+nav.menu-mobile{
+    display:block;
+}
+
+header{
+    position:relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+
+nav.menu-mobile{
+    position:absolute;
+    top:2rem;
+    right:2rem;
+    left:2rem;
+    background-color: #001AFF;
+    z-index:101;
+    width:90%;
+        padding:2rem;
+}
+
+
+
+ul.menu-mobile li{
+padding:0.9rem;
+border-bottom:1px dashed #14F661
+}
+
+
+ul.menu-mobile li a{
+    color:#ffffff;
+    font-weight: 500;
+}
+
+ul.menu-mobile li a:hover{
+    color:#14F661;
+    font-weight: 500;
+}
+
+
+
+
+/* .menu-mobile input[type=checkbox]{
+    display:none;
+} */
+
+
+nav.menu-mobile{
+    display:none;
+}
+
+
+nav.menu-mobile input[type=checkbox]:checked + ul.dropdown-menu{
+    display:block;
+
+}
+
+#nav-top input[type=checkbox]:checked + ul li{
+    text-align: right;
+}
+
+
+
+
+
+
+/* 
+.menu-mobile label[for=mobile]{
+    color:#ffffff;
+    z-index: 200;;
+    font-weight: 700;
+    background-color: #ddd;
+    cursor: pointer;
+
+} */
+
+label.menu-mobile {
+    padding:0.9rem;
+    color:#ffffff;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: yellow;
+}
+
+
+#clic-menu{
+    display:block;
+}
+
+input#clic-menu, input#close-menu{
+    display:none;
+}
+
+
+
+label.clic-menu{
+display: block;
+padding:0.9rem;
+    color:#001AFF;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+
+
+}
+
+label.close-menu{
+    display: block;
+    padding:0.9rem;
+    color:#ffffff;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: right;
+
+    
+    }
+
+
+
+
+input[type=checkbox]:checked + nav.menu-mobile{
+    display:block;
+
+}
+
+
+input#close-menu[type=checkbox]:checked{
+    display:none;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:1100px){
+
+
+section.contact {
+    flex-direction: column;
+
+}
+
+section.contact > div{
+
+    justify-content: flex-start;
+    margin:3rem 0;
+}
+
+
+section.contact form{
+    width:100%;
+}
 }
